@@ -1,0 +1,61 @@
+{
+  "name": "@outstandingboy/rext",
+  "preferGlobal": true,
+  "version": "1.0.0-alpha.3",
+  "description": "React Express Template, Perfect react + express template, full stack boilerplate (React + Express + Webpack)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "rext": "./rext.js"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/outstanding1301/rext.git"
+  },
+  "keywords": [
+    "react",
+    "express",
+    "webpack",
+    "template",
+    "generator",
+    "rext",
+    "boilerplate",
+    "react-app",
+    "create-react-app",
+    "react express",
+    "babel",
+    "easy",
+    "http",
+    "full stack",
+    "web",
+    "server",
+    "frontend",
+    "backend",
+    "node",
+    "rex-t",
+    "react-express-template",
+    "react express template",
+    "react template",
+    "express template"
+  ],
+  "author": {
+    "name": "outstandingboy",
+    "email": "lerrty0402@gmail.com",
+    "url": "http://outstandingboy.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/outstanding1301/rext/issues"
+  },
+  "homepage": "https://github.com/outstanding1301/rext#readme",
+  "dependencies": {
+    "exec-npm-install": "^1.0.4",
+    "request": "^2.88.0",
+    "unzip": "^0.1.11"
+  }
+}
