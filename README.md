@@ -22,11 +22,9 @@ Create your **React** + **Express** project with just **one line.**
 
 ## Creating an App
 
-not 'one line' yet... ~~but three line~~
 ```sh
-mkdir [your-app-name]
-git clone https://github.com/outstanding1301/react-express-template.git [your-app-name]
-npm install
+npm install -g @outstandingboy/rext
+rext [your-app-name]
 ...
 Done!
 ```
@@ -59,6 +57,7 @@ You can change port at `webpack.config.js` file. (if you want)
     │           ├── express.png
     │           ├── outstandingboy.png
     │           ├── react.png
+    │           ├── rext.png
     │           └── webpack.png
     └── server // Express back end
         ├── api.js
