@@ -6,6 +6,9 @@ React EXpress Template, **REX-T** for node.
 `REX-T` is easy tool for create application using **React** (for front-end) and **Express** (for back-end)
 
 ## about REX-T
+
+![rext-example](https://user-images.githubusercontent.com/48477016/64055405-2fa84c80-cbc7-11e9-9a97-0f5eeb708d6f.gif)
+
 ### No more difficult and annoying settings
 
 You **don't** need to install or configure tools like Webpack or Babel.  

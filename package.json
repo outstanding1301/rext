@@ -1,7 +1,7 @@
 {
   "name": "@outstandingboy/rext",
   "preferGlobal": true,
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.5",
   "description": "React Express Template, Perfect react + express template, full stack boilerplate (React + Express + Webpack)",
   "main": "index.js",
   "scripts": {
@@ -55,6 +55,7 @@
   "homepage": "https://github.com/outstanding1301/rext#readme",
   "dependencies": {
     "exec-npm-install": "^1.0.4",
+    "readline": "^1.3.0",
     "request": "^2.88.0",
     "unzip": "^0.1.11"
   }

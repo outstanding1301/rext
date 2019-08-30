@@ -5,47 +5,53 @@ const path = require('path');
 const https = require('https');
 const zlib = require('zlib');
 const fs = require('fs');
+const readline = require('readline');
 const unzip = require('unzip');
 const execNpmInstall = require('exec-npm-install')
 
 let appname = undefined;
 let author = undefined;
 
-console.log('\n\x1b[32m  [ RExT 🦖 ] - React + Express Template\x1b[0m\n');
-
 if(process.argv.length === 2){
-  process.stdout.write('app name: \x1b[33m');
-  const stdin = process.openStdin();
-  stdin.addListener('data', d => {
-    appname = d.toString().trim().toLowerCase().replace(' ', '-');
-    console.log('\x1b[0mapp name:[\x1b[36m'+appname+'\x1b[0m]');
+  console.log('\n\x1b[32m  [ RExT 🦖 ] - React + Express Template\x1b[0m\n');
+  const rl = readline.createInterface(process.stdin, process.stdout);
 
-    process.stdout.write('author: \x1b[33m');
-    const stdin2 = process.openStdin();
-    stdin2.addListener('data', d => {
-      author = d.toString().trim().toLowerCase().replace(' ', '-');
+  rl.question('app name: \x1b[33m', (_appname) => {
+    appname = _appname.toString().trim().toLowerCase().replace(' ', '-');
+    console.log('\x1b[0mapp name:[\x1b[36m'+appname+'\x1b[0m]');
+    rl.question('author: \x1b[33m', (_author) => {
+      author = _author.toString().trim().toLowerCase().replace(' ', '-');
       console.log('\x1b[0mauthor:[\x1b[36m'+author+'\x1b[0m]');
       createApp(appname, author);
-      stdin2.pause();
+      rl.close();
     })
-    createApp(appname);
-    stdin.pause();
-  })
+  });
 }
 else if(process.argv.length === 3){
+  if (process.argv[2].startsWith("-") || process.argv[2].startsWith("--")){
+    const cmd = process.argv[2];
+    if(cmd === "-v" || cmd === "--version"){
+      const pkgjs = require(process.cwd()+'/package.json');
+      console.log(pkgjs.version);
+      return;
+    }
+  }
+  console.log('\n\x1b[32m  [ RExT 🦖 ] - React + Express Template\x1b[0m\n');
+  const rl = readline.createInterface(process.stdin, process.stdout);
+
   appname = process.argv[2];
   appname = appname.toString().trim().toLowerCase().replace(' ', '-');
   console.log('\x1b[0mapp name:[\x1b[36m'+appname+'\x1b[0m]');
-  process.stdout.write('author: \x1b[33m');
-  const stdin = process.openStdin();
-  stdin.addListener('data', d => {
-    author = d.toString().trim().toLowerCase().replace(' ', '-');
+  rl.question('author: \x1b[33m', (_author) => {
+    author = _author.toString().trim().toLowerCase().replace(' ', '-');
     console.log('\x1b[0mauthor:[\x1b[36m'+author+'\x1b[0m]');
     createApp(appname, author);
-    stdin.pause();
+    rl.close();
   })
 }
 else if(process.argv.length === 4){
+  console.log('\n\x1b[32m  [ RExT 🦖 ] - React + Express Template\x1b[0m\n');
+
   appname = process.argv[2];
   author = process.argv[3];
   appname = appname.toString().trim().toLowerCase().replace(' ', '-');
