@@ -1,5 +1,7 @@
 <img width="465" alt="rext" src="https://user-images.githubusercontent.com/48477016/64054265-35029880-cbc1-11e9-8379-d14ed883d1c1.png">
 
+[![github-repo][github-image]][github-url]
+[![npm-repo][npm-image]][npm-url]
 
 React EXpress Template, **REX-T** for node.
 
@@ -71,3 +73,8 @@ You can change port at `webpack.config.js` file. (if you want)
 ![rext](https://user-images.githubusercontent.com/48477016/64041985-da0a7a80-cb9b-11e9-9d17-84b133c4abce.gif)
 
 iT\`S KReiGy!!!!!!!!!
+
+[github-image]: https://img.shields.io/badge/Github-RExT--1.0.0alpha.5-success.svg
+[github-url]: https://github.com/outstanding1301/rext
+[npm-image]: https://img.shields.io/badge/npm-v6.4.1-orange.svg
+[npm-url]: https://www.npmjs.com/package/@outstandingboy/rext
